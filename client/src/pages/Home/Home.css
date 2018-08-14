@@ -1,0 +1,23 @@
+.homeStyle{
+    margin-left: 540px;
+    margin-top: 90px;
+    font-size: 48px;
+    font-weight: bolder;
+    font-family: 'EB Garamond', serif;
+}
+
+.Background{
+    background-image: url("../../imgs/marble.png");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: 100% 100%;
+    overflow: auto;
+    /* margin-top: -5px; */
+    min-height: 400px;
+}
+
+.wrapper{
+    margin-top: 15px;
+    padding: 0px;
+    position: center;
+}

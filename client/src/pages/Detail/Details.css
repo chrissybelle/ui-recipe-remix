@@ -1,0 +1,61 @@
+#foodImage{
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    height: 300px;
+    width: 300px;
+}
+
+
+.updatebtn{
+    background-color: #fad185;
+    width: 193px;
+    margin-left: 600px;
+}
+
+.createdRecipe{
+    background-color: white;
+    height: auto;
+    margin: 50px 100px 50px 100px;
+    position: relative;
+}
+
+.bgrecipe{
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-right: 100px;
+    opacity: .8;
+    background-color: rgb(156, 199, 112);
+    border-radius: 25px;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.recipedeets{
+    margin-left: auto;
+    }
+
+.updateRecipe{
+    width: 400px;
+    margin-top: 25px;
+    margin-left: 550px;
+}
+
+.update{
+    margin-left: 600px;
+    margin-top: 50px;
+    opacity: .8;
+    background-color: rgb(156, 199, 112);
+    border-radius: 25px;
+    width: 300px;
+    height: 45px;
+}
+
+.header{
+    margin-left: 170px;
+}
+
+.origin{
+    margin-left: 40px;
+}

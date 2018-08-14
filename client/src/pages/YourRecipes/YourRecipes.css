@@ -1,0 +1,126 @@
+.bgImage {
+    background-image: url("../../imgs/resize.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: 100% 100%;
+    overflow: auto;
+}
+
+.addRecipe{
+    margin: auto;
+    margin-top: 10px;
+}
+
+.createrecipe {
+    width: 250px;
+    margin-left: 175px;
+    margin-top: 30px;
+  }
+
+  .cancelbtn {
+    background-color: #e09b6a;
+    width: 190px;
+  }
+
+  .submitbtn{
+    background-color: #fad185;
+    width: 193px;
+    margin-left: 15px;
+  }
+
+  .results{
+    margin-left: 150px;
+    margin-top: 50px;
+    opacity: .8;
+    background-color: rgb(156, 199, 112);
+    border-radius: 25px;
+    width: 300px;
+}
+
+h1{
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center; 
+    margin: auto; 
+    color:black;
+}
+
+.create{
+    margin-left: 600px;
+    margin-top: 50px;
+    opacity: .8;
+    background-color: rgb(156, 199, 112);
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+}
+
+  .recipe{
+      width: 400px;
+      margin-top: 25px;
+      margin-left: 550px;
+  }
+
+  .favrecipebtn {
+      background-color: #fad185;
+      width: 250px;
+      float: left;
+      clear: both;
+      margin-top: -55px;
+      margin-left: 300px;
+  }
+
+  .searchForm {
+    /* margin-top: 100px; */
+    margin-left: 50px;
+    width: 220px;
+}
+
+  
+
+  button:hover:before {
+	left: 7px;
+}
+
+.fa-utensils {
+    opacity: 0.75;
+}
+
+.fa-utensils:hover {
+    /* opacity: 1; */
+    font-size: 20px;
+    transition: all 200ms ease;
+}
+
+/* .form-control{
+    margin-top: 100px;
+    height: 50px;
+} */
+
+button {
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px 35px;  
+    overflow:hidden;
+    border: 2px solid #fad185;
+}
+
+button:hover {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.15);
+}
+
+button:disabled {
+    background-color: #fff2da;
+    box-shadow: none;
+  }
+
+#warning{
+    font-family: FontAwesome;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center; 
+    margin-top: 250px; 
+    color:black;
+
+}

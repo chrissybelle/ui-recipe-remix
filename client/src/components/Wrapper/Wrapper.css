@@ -1,0 +1,23 @@
+.wrapper {
+  padding: 50px;
+  /* background:rgba(29, 29, 29, 0.2); */
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: hidden;;
+  width: 90%;
+  /* margin: 0 auto; */
+  margin: 75px;
+
+}
+
+.fa-spinner {
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+}
+
