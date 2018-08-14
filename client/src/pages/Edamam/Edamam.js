@@ -330,7 +330,7 @@ class EdamamSearch extends React.Component {
 
   render() {
     return (
-      <div className="bgImage">
+      // <div className="bgImage">
         <Container fluid>
           <Row>
             <Col size="md-4">
@@ -423,7 +423,7 @@ class EdamamSearch extends React.Component {
           </Row>
         </Container>
 
-      </div>
+      // </div>
     );
   }
 }

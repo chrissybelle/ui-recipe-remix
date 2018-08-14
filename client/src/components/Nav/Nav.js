@@ -5,7 +5,7 @@ import "./nav.css";
 
 
 const Nav = () =>
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-expand-lg">
     <a className="navbar-brand" href="">
       <img id= "logo" src="/images/YourPerfectRecipe.png" width="50" height="50"
         className="d-inline-block align-top" alt=""/>  <h2>Your Perfect Recipes!</h2></a>

@@ -1,5 +1,5 @@
-.bgImage {
-    background-image: url("../../imgs/chinh-le-duc-261085-unsplash.jpg")    ;
+body {
+    background-image: url("../../imgs/chinh-le-duc-261085-unsplash.jpg");
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: auto;

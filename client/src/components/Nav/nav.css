@@ -1,12 +1,14 @@
 .navbar{
     height: 65px;
+    background-color: rgba(0, 0, 0, 0.538);
+    /* background: transparent; */
 }
 
 h2 {
     font-family: 'Cookie', cursive;
-    font-size: 40px ;
+    font-size: 40px;
     padding: 5px;
-    color: rgba(19, 57, 78, 0.808);
+    color: rgba(213, 137, 6, 0.808);
     float: right;
     }
 
@@ -18,14 +20,16 @@ h2 {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     text-align: center;  
-    color: rgba(19, 57, 78, 0.808);
+    color: rgb(192, 191, 191);
 }
   
 .navbar-nav {
   padding: 75px;
+
 }
  
 .navbar-text{
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
+    color: rgb(192, 191, 191);
 }
