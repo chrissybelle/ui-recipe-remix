@@ -333,11 +333,12 @@ class EdamamSearch extends React.Component {
       <div className="bgImage">
         <Container fluid>
           <Row>
-            <Col size="md-6">
-              <h1 className="results">Search</h1>
+            <Col size="md-4">
+              <h1 className="searchHeader">Search</h1>
               <form id="searchForm">
-                <div className="searchForm">
+                {/* <div className="searchForm"> */}
                   <Input
+                    className="searchBox"
                     value={this.state.queryString}
                     onChange={this.handleInputChange}
                     name="queryString"
@@ -351,8 +352,8 @@ class EdamamSearch extends React.Component {
                     <i className="fas fa-utensils" />
                     Search!
                 </button>
-                </div>
-                <div className="savedForm">
+
+                {/* <div className="savedForm"> */}
                   <button
                     className="savedbtn"
                     disabled={!(this.state.user)}
@@ -361,7 +362,8 @@ class EdamamSearch extends React.Component {
                     <i className="fas fa-utensils" />
                     View Saved Recipes
               </button>
-                </div>
+              {/* </div> */}
+                {/* </div> */}
               </form>
             </Col>
             <Col size="md-6">
@@ -370,9 +372,9 @@ class EdamamSearch extends React.Component {
 
 
               {!this.state.submitBtn ?
-                <h1 className="results">Search Results</h1>
+                <h1 className="resultsHeader">Search Results</h1>
                 :
-                <h1 className="results">Your Saved Recipes </h1>
+                <h1 className="resultsHeader">Your Saved Recipes </h1>
               }
 
 

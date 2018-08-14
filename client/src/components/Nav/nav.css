@@ -15,8 +15,8 @@ h2 {
     }
   
 .nav-link{
-    font-family: 'EB Garamond', serif;
-    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
     text-align: center;  
     color: rgba(19, 57, 78, 0.808);
 }
@@ -26,6 +26,6 @@ h2 {
 }
  
 .navbar-text{
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
 }
