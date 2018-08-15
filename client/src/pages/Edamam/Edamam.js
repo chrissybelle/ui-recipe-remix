@@ -34,6 +34,7 @@ class EdamamSearch extends React.Component {
       refresh: [],
       user: null,
       logInAlert: false,
+      showWrapper: false,
     };
     this.handleBtnClick = this.handleBtnClick.bind(this);
   }
@@ -61,7 +62,7 @@ class EdamamSearch extends React.Component {
     });
   };
 
-  // When the form is submitted, use the API.searchRecipes method to get the recipe data from Edamam
+  // When the search form is submitted, use the API.searchRecipes method to get the recipe data from Edamam
   // Then reload recipes from the database
   handleFormSubmit = event => {
     event.preventDefault();
@@ -100,7 +101,8 @@ class EdamamSearch extends React.Component {
             console.log("FINAL: " + uniqueResults.length);
             this.setState({
               displayRecipes: uniqueResults,
-              submitBtn: false
+              submitBtn: false,
+              showWrapper: true
             })
           }
           // for (var i=0; i<searchResults.length; i++) {
@@ -174,17 +176,21 @@ class EdamamSearch extends React.Component {
   //to pull list of your saved recipes
   handleFormSubmitSaved = (event, user) => {
     event.preventDefault();
+    console.log("retrieving saved recipes");
     user = this.state.user;
     API.searchForLiked(user)
       .then(res => {
         uniqueResults = res.data;
         this.setState({
           displayRecipes: uniqueResults,
-          submitBtn: true
+          submitBtn: true,
+          showWrapper: true
         })
       })
+      console.log(uniqueResults);
   };
 
+  //to remove recipes from saved recipe list
   deleteRecipes = (id, user) => {
     user = this.state.user;
     API.deleteEdamamID(id)
@@ -226,12 +232,12 @@ class EdamamSearch extends React.Component {
           // if recipe is saved in our db already
           if (res.data !== null) {
 
-            // delete recipe
+            // delete recipe (un-likes the recipe)
             this.deleteEdamam(cardName);
             console.log("recipe deleted");
 
 
-            // else if recipe is not saved in our db already, save the recipe
+         // else if recipe is not saved in our db already, save the recipe (likes the recipe)
           } else if (res) {
             console.log("saving recipe");
             API.saveEdamam({
@@ -314,7 +320,7 @@ class EdamamSearch extends React.Component {
   // };
 
 
-  // removes recipe from db
+  // removes recipe from db (used in handleBtnClick to un-like recipe)
   deleteEdamam = cardName => {
     // console.log("recipe deleted");
     // // finds specific recipe in our db
@@ -333,7 +339,7 @@ class EdamamSearch extends React.Component {
       <Container fluid>
         <Row>
           <Col size="md-4">
-            <h1 className="searchHeader">Search</h1>
+            {/* <h1 className="searchHeader">Search</h1> */}
           </Col>
           <Col size="md-8">
           {/* changes results header depending on which button ('search' or 'viewed saved recipes') is clicked */}
@@ -367,7 +373,7 @@ class EdamamSearch extends React.Component {
                 disabled={!(this.state.user)}
                 onClick={this.handleFormSubmitSaved}
               >
-                <i className="fas fa-utensils" />
+                <i className="fas fa-utensils" /> 
                 View Saved Recipes
               </button>
             </form>
@@ -377,7 +383,7 @@ class EdamamSearch extends React.Component {
             {this.state.logInAlert ?
               <FeedbackModal show={this.state.logInAlert} />
               :
-              <div className="resultsWrapper" showcard={this.state.showCard}>
+              <div className={`resultsWrapper-${this.state.showWrapper}`} showcard={this.state.showCard}>
               {/* if user clicks 'search' button, recipes will be pulled from Edamam API and displayed in the results section */}
               {!this.state.submitBtn ?
                 uniqueResults.map((results, index) => (

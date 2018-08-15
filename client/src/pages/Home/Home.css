@@ -1,3 +1,15 @@
+body {
+    background-image: url("../../imgs/chinh-le-duc-261085-unsplash.jpg");
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: auto;
+    overflow: auto;
+    min-height:700px;
+}
+button {
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .homeStyle{
     margin-left: 540px;
     margin-top: 90px;
