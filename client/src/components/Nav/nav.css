@@ -17,7 +17,8 @@ h2 {
     }
   
 .nav-link{
-    font-family: 'Nunito', sans-serif;
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif; */
     font-size: 20px;
     text-align: center;  
     color: rgb(192, 191, 191);
@@ -29,7 +30,7 @@ h2 {
 }
  
 .navbar-text{
-    font-family: 'Nunito', sans-serif;
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17px;
     color: rgb(192, 191, 191);
 }

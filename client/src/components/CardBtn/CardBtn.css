@@ -1,18 +1,16 @@
 .card-btn {
-  /* border-radius: 50%; */
   height: auto;
   width: auto;
   border: none;
-  bottom: 1px;
-  /* color: #000; */
+  /* bottom: 1px;
   font-size: 30px;
   cursor: pointer;
-  font-family: FontAwesome;
+  font-family: FontAwesome; */
 }
 
-.card-btn:hover {
+/* .card-btn:hover {
   box-shadow: none;
-}
+} */
 
 .unliked, .liked {
   position: absolute;

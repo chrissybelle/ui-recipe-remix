@@ -353,15 +353,14 @@ class EdamamSearch extends React.Component {
                 value={this.state.queryString}
                 onChange={this.handleInputChange}
                 name="queryString"
-                placeholder="Enter Search Term Here"
+                placeholder="Search recipes..."
               />
               <button
                 className="searchBtn"
                 disabled={!(this.state.queryString)}
                 onClick={this.handleFormSubmit}
               >
-                <i className="fas fa-utensils" />
-                Search!
+                <i className="fas fa-search"></i>
               </button>
               <button
                 className="savedBtn"

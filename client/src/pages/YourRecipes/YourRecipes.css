@@ -77,11 +77,6 @@ h1{
     width: 220px;
 }
 
-  
-
-  button:hover:before {
-	left: 7px;
-}
 
 .fa-utensils {
     opacity: 0.75;
@@ -99,16 +94,14 @@ h1{
 } */
 
 button {
-    border-radius: 3px;
-    width: 100%;
-    padding: 10px 35px;  
-    overflow:hidden;
-    border: 2px solid #fad185;
+  margin: 0 auto;
+  height: 0;
+  width: 0;
 }
 
-button:hover {
+/* button:hover {
     box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.15);
-}
+} */
 
 button:disabled {
     background-color: #fff2da;
