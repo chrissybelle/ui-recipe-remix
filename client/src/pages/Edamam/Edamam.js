@@ -204,7 +204,7 @@ class EdamamSearch extends React.Component {
   handleBtnClick = (event) => {
     event.preventDefault();
     console.log(this.props.appContext.user);
-  
+
 
     //check if user is logged in
     if (this.props.appContext.user) {
@@ -255,8 +255,8 @@ class EdamamSearch extends React.Component {
       this.setState({
         logInAlert: true
       })
-        console.log(this.state.logInAlert)
-      
+      console.log(this.state.logInAlert)
+
     }
 
     //const cardID = event.target.attributes.getNamedItem("data-value").value;
@@ -330,100 +330,91 @@ class EdamamSearch extends React.Component {
 
   render() {
     return (
-      // <div className="bgImage">
-        <Container fluid>
-          <Row>
-            <Col size="md-4">
-              <h1 className="searchHeader">Search</h1>
-              <form id="searchForm">
-                {/* <div className="searchForm"> */}
-                  <Input
-                    className="searchBox"
-                    value={this.state.queryString}
-                    onChange={this.handleInputChange}
-                    name="queryString"
-                    placeholder="Enter Search Term Here"
-                  />
-                  <button
-                    className="searchbtn"
-                    disabled={!(this.state.queryString)}
-                    onClick={this.handleFormSubmit}
-                  >
-                    <i className="fas fa-utensils" />
-                    Search!
-                </button>
+      <Container fluid>
+        <Row>
+          <Col size="md-4">
+            <h1 className="searchHeader">Search</h1>
+          </Col>
+          <Col size="md-8">
+          {/* changes results header depending on which button ('search' or 'viewed saved recipes') is clicked */}
+            {!this.state.submitBtn ?
+              <h1 className="resultsHeader">Search Results</h1>
+              :
+              <h1 className="resultsHeader">Your Saved Recipes </h1>
+            }
+          </Col>
+        </Row>
 
-                {/* <div className="savedForm"> */}
-                  <button
-                    className="savedbtn"
-                    disabled={!(this.state.user)}
-                    onClick={this.handleFormSubmitSaved}
-                  >
-                    <i className="fas fa-utensils" />
-                    View Saved Recipes
+        <Row>
+          <Col size="md-4">
+            <form className="searchForm">
+              <Input
+                className="searchBox"
+                value={this.state.queryString}
+                onChange={this.handleInputChange}
+                name="queryString"
+                placeholder="Enter Search Term Here"
+              />
+              <button
+                className="searchBtn"
+                disabled={!(this.state.queryString)}
+                onClick={this.handleFormSubmit}
+              >
+                <i className="fas fa-utensils" />
+                Search!
               </button>
-              {/* </div> */}
-                {/* </div> */}
-              </form>
-            </Col>
-            <Col size="md-6">
-
-
-
-
-              {!this.state.submitBtn ?
-                <h1 className="resultsHeader">Search Results</h1>
-                :
-                <h1 className="resultsHeader">Your Saved Recipes </h1>
-              }
-
-
-              {this.state.logInAlert ?
-                <FeedbackModal show={this.state.logInAlert} />
-                :
-                ""
-              }
-
+              <button
+                className="savedBtn"
+                disabled={!(this.state.user)}
+                onClick={this.handleFormSubmitSaved}
+              >
+                <i className="fas fa-utensils" />
+                View Saved Recipes
+              </button>
+            </form>
+          </Col>
+          <Col size="md-8">
+          {/* checks if user is signed in; if they are not and they try to save a recipe, alert modal will show prompting user to log in */}
+            {this.state.logInAlert ?
+              <FeedbackModal show={this.state.logInAlert} />
+              :
               <div className="resultsWrapper" showcard={this.state.showCard}>
-                {!this.state.submitBtn ?
-                  uniqueResults.map((results, index) => (
-                    <Card
-                      key={results.recipe.shareAs}
-                      image={results.recipe.image}
-                      recipeName={results.recipe.label}
-                      recipeLink={results.recipe.url}
-                      recipeIngredients={results.recipe.ingredientLines}
-                      handleBtnClick={this.handleBtnClick}
-                      likeTracker={this.state.like ? results.recipe.url : ""}
-                      like={this.state.like ? "liked" : "unliked"}
-                      // save={this.state.save ? "saved" : "unsaved"}
-                      recipeID={index}
-                      marker="true"
-                    />
-                  ))
-                  :
-                  uniqueResults.map((results, index) => (
-                    <SavedCards
-                      key={index}
-                      user={this.state.user}
-                      image={results.image}
-                      recipeName={results.name}
-                      recipeLink={results.recipelink}
-                      recipeIngredients={results.ingredients}
-                      deleteRecipe={() => this.deleteRecipes(results._id)}>
-                    </SavedCards>
+              {/* if user clicks 'search' button, recipes will be pulled from Edamam API and displayed in the results section */}
+              {!this.state.submitBtn ?
+                uniqueResults.map((results, index) => (
+                  <Card
+                    key={results.recipe.shareAs}
+                    image={results.recipe.image}
+                    recipeName={results.recipe.label}
+                    recipeLink={results.recipe.url}
+                    recipeIngredients={results.recipe.ingredientLines}
+                    handleBtnClick={this.handleBtnClick}
+                    likeTracker={this.state.like ? results.recipe.url : ""}
+                    like={this.state.like ? "liked" : "unliked"}
+                    recipeID={index}
+                    marker="true"
+                  />
+                ))
+                :
+                // otherwise if user clicks 'view saved recipes' button, recipes will be pulled from our db and displayed in the results section
+                uniqueResults.map((results, index) => (
+                  <SavedCards
+                    key={index}
+                    user={this.state.user}
+                    image={results.image}
+                    recipeName={results.name}
+                    recipeLink={results.recipelink}
+                    recipeIngredients={results.ingredients}
+                    deleteRecipe={() => this.deleteRecipes(results._id)}>
+                  </SavedCards>
+                ))
+              }
+            </div>
+            }
+          </Col>
+        </Row>
+      </Container >
 
-
-                  ))
-                }
-              </div>
-
-
-            </Col>
-          </Row>
-        </Container>
-
-      // </div>
     );
   }
 }
