@@ -44,9 +44,9 @@
   top: 25%;
 }
 
-.btn {
+/* .btn {
   font-family: FontAwesome;
-}
+} */
 
 .ingredientHeader {
   font-weight: bold;
@@ -86,6 +86,7 @@
 
   .fa-heart:hover {
       /* Start the shake animation and make the animation last for 0.5 seconds */
+      cursor: grab;
       animation: shake 0.5s; 
       /* When the animation is finished, start again */
       animation-iteration-count: infinite; 

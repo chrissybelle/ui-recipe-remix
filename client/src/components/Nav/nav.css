@@ -1,36 +1,62 @@
-.navbar{
-    height: 65px;
+.navBar{
+    height: auto;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.538);
+    padding: 10px;
     /* background: transparent; */
 }
-
-h2 {
-    font-family: 'Cookie', cursive;
-    font-size: 40px;
-    padding: 5px;
-    color: rgba(213, 137, 6, 0.808);
-    float: right;
-    }
-
-    #logo{
-        margin-top: 4px;
-    }
-  
-.nav-link{
+.nav {
+    display: inline;
+}
+.navItem {
+    color: #333333;
     font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif; */
+    font-size: 20px;
+    display: inline;
+}
+.active .navItem {
+    color: #999999;
+}
+.navLink {
+    padding: 5px 10px;
+}
+#firebaseui_container {
+    width: auto;
+    display: inline-block;
+    float: right;
+}
+/* .loginSection {
+    float: right;
+} */
+
+/* .navBrand {
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: auto;
+    padding: 5px;
+    margin: 0;
+    color: rgba(255, 210, 152, 0.913);
+    float: right;
+    } */
+
+    /* #logo{
+        margin-top: 4px;
+    } */
+  
+/* .nav-link{
+    font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
     font-size: 20px;
     text-align: center;  
     color: rgb(192, 191, 191);
-}
+} */
   
-.navbar-nav {
+/* .navbar-nav {
   padding: 75px;
 
-}
+} */
  
-.navbar-text{
+/* .navbar-text{
     font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17px;
     color: rgb(192, 191, 191);
-}
+} */

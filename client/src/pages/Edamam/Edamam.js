@@ -372,6 +372,7 @@ class EdamamSearch extends React.Component {
                 className="savedBtn"
                 disabled={!(this.state.user)}
                 onClick={this.handleFormSubmitSaved}
+                title={!(this.state.user) ? "Please log in first!" : "" }
               >
                 <i className="fas fa-utensils" /> 
                 View Saved Recipes
