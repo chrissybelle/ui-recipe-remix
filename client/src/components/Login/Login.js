@@ -5,6 +5,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 // import "./dashboard.css";
 import {withMultiContext} from "with-context";
 import { AppContext } from '../AppProvider/AppProvider.js';
+import "./login.css";
 
 
 class SignInScreen extends Component {
@@ -77,9 +78,9 @@ class SignInScreen extends Component {
       );
     }
     return (
-      <span>
-        <span>Welcome {firebase.auth().currentUser.displayName}! </span>
-        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+      <span className="firebaseString">
+        <span className="welcomeString">Welcome {firebase.auth().currentUser.displayName}! </span>
+        <a className="signOut" onClick={() => firebase.auth().signOut()}>Sign-out</a>
       </span>
     );
   }

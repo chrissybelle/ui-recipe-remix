@@ -1,5 +1,5 @@
 .navBar{
-    height: auto;
+    height: 90px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.538);
     padding: 10px;
@@ -9,16 +9,43 @@
     display: inline;
 }
 .navItem {
-    color: #333333;
     font-family: fa5-proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
-    display: inline;
+    display: inline-block;
+    margin-top: 18px;
 }
-.active .navItem {
-    color: #999999;
+.loginSection {
+    float: right;
+    margin-right: 5px;;
+    margin-top: 20px;
+    display: inline-block;
+}
+.loginBtn {
+    color: #ffffff;
+}
+.active-navLink{
+    color: #eaeaea;
+    text-shadow: 2px 2px #000000;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.active-navLink:hover{
+    color: #eaeaea;
+    text-shadow: 2px 2px #000000;
+    text-decoration: none;
 }
 .navLink {
     padding: 5px 10px;
+    color: #c27500c2;
+    font-size: 25px;
+    font-weight: none;
+    /* text-shadow: 2px 2px #999999; */
+}
+.navLink:hover {
+    color: #ffffffd1;
+    text-decoration: none;
+    /* text-shadow: 2px 2px #000000; */
 }
 #firebaseui_container {
     width: auto;

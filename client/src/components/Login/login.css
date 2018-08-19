@@ -1,0 +1,13 @@
+.firebaseString {
+    margin-top: 18px;
+}
+.welcomeString {
+    color: #ffffff;
+}
+.signOut {
+    color: #c27500c2;
+    cursor: pointer;
+}
+.signOut:hover {
+    color: #ffffff;
+}

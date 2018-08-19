@@ -23,17 +23,17 @@ class NavBar extends React.Component {
           <Col size="md-3">a */}
 
         <ul className="nav">
-          <li className={window.location.pathname === "/home" ? "current navItem" : "navItem"} >
-            <a className="navLink" href="/home">Home</a>
+          <li className="navItem" >
+            <a className={window.location.pathname === "/home" ? "active-navLink" : "navLink"} href="/home">Home</a>
           </li>
-          <li className={window.location.pathname === "/edamam" ? "current navItem" : "navItem"}>
-            <a className="navLink" href="/edamam">Search</a>
+          <li className="navItem">
+            <a className={window.location.pathname === "/edamam" ? "active-navLink" : "navLink"} href="/edamam">Search</a>
           </li>
-          <li className={window.location.pathname === "/your-recipes" ? "current navItem" : "navItem"}>
-            <a className="navLink" href="/your-recipes">Your Recipes</a>
+          <li className="navItem">
+            <a className={window.location.pathname === "/your-recipes" ? "active-navLink" : "navLink"} href="/your-recipes">Your Recipes</a>
           </li>
 
-          <li className="navItem loginSection justify-content-end">
+          <li className="loginSection">
             <Login className="loginBtn" />
           </li>
 
