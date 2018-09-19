@@ -53,6 +53,12 @@ class EdamamSearch extends React.Component {
 
   }
 
+
+  
+  // componentDidMount() {
+  //   window.scrollTo(0, 0)
+  // }
+
   // Handles updating component state when the user types into the input field
   handleInputChange = event => {
     event.preventDefault();

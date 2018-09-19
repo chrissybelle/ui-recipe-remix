@@ -32,7 +32,7 @@ export default {
   // E D A M A M - R E L A T E D  Q U E R I E S
   // Searches Edamam API
   searchEdamam: function (queryString) {
-    return axios.get("https://api.edamam.com/search?q=" + queryString + "&app_id=a5ee7877&app_key=385a3e92adcbf250abaab079e4e705f5&to=12");
+    return axios.get("https://api.edamam.com/search?q=" + queryString + "&app_id=f72829e4&app_key=45499060b5d862c54e7aa1cfa949cb55&to=12");
   },
   // Saves Edamam API recipes to our db
   // See "savedEdamam" in edmamamController

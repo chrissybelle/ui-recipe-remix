@@ -1,9 +1,9 @@
 import firebase from 'firebase';
  // Configure Firebase.
 const config = {
-    apiKey: 'AIzaSyCGyfwSt_X1JxdYfNQIA-Zykb1VW3mSxEY',
-    authDomain: 'your-perfect-recipes.firebaseapp.com',
-    databaseURL: 'https://your-perfect-recipes.firebaseio.com'
+    apiKey: "AIzaSyC-4NsFuVCy50k8nlh4v1GMuDWBG9Tufx8",
+    authDomain: "ui-recipe.firebaseapp.com",
+    databaseURL: "https://ui-recipe.firebaseio.com",
     // ...
 };
 
