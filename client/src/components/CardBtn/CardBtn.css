@@ -1,7 +1,7 @@
 .card-btn {
-  height: auto;
+  /* height: auto;
   width: auto;
-  border: none;
+  border: none; */
   /* bottom: 1px;
   font-size: 30px;
   cursor: pointer;
@@ -34,7 +34,7 @@
 
 
 .true {
-  color: #ffe4e1;
+  color: #fd7c7c;
 }
 
 .false {

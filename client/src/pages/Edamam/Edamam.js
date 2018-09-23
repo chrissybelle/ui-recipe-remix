@@ -14,6 +14,7 @@ import SavedCards from "../../components/SavedCards";
 
 
 
+
 let searchResults = [];
 let dbSavedResults = [];
 let displayResults = [];
@@ -54,7 +55,7 @@ class EdamamSearch extends React.Component {
   }
 
 
-  
+
   // componentDidMount() {
   //   window.scrollTo(0, 0)
   // }
@@ -390,7 +391,9 @@ class EdamamSearch extends React.Component {
             {this.state.logInAlert ?
               <FeedbackModal show={this.state.logInAlert} />
               :
+
               <div className={`resultsWrapper-${this.state.showWrapper}`} showcard={this.state.showCard}>
+
               {/* if user clicks 'search' button, recipes will be pulled from Edamam API and displayed in the results section */}
               {!this.state.submitBtn ?
                 uniqueResults.map((results, index) => (

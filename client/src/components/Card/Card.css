@@ -87,10 +87,10 @@
   .fa-heart:hover {
       /* Start the shake animation and make the animation last for 0.5 seconds */
       cursor: grab;
-      animation: shake 0.5s; 
+      animation: shake 1s; 
       /* When the animation is finished, start again */
       animation-iteration-count: infinite; 
-      color: pink;
+      color: red;
   }
   
   @keyframes shake {

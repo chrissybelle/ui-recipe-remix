@@ -8,14 +8,14 @@ class CardBtn extends React.Component {
     const { onClick, style } = this.props
 
     return (
-      <button
+      <div
         onClick={onClick}
-        className={`card-btn`}
+        // className={`card-btn`}
         {...style}
         // data-value={dataValue}
       >
       {this.props.children}
-      </button>
+      </div>
     );
   }
 }

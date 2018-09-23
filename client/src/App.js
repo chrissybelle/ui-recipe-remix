@@ -7,13 +7,14 @@ import Home from "./pages/Home";
 import EdamamSearch from "./pages/Edamam";
 import NavBar from "./components/Nav";
 import AppProvider from "./components/AppProvider"
-
+// import ScrollToTop from 'react-router-scroll-top';
 
 
 const App = () =>
 <AppProvider>
     <React.Fragment>
     <Router>
+      {/* <ScrollToTop> */}
       <div>
       <NavBar />
         {/* <Jumbotron /> */}
@@ -27,6 +28,7 @@ const App = () =>
           <Route component={NoMatch} />
         </Switch>
       </div>
+      {/* </ScrollToTop> */}
     </Router>
     </React.Fragment>
     </AppProvider>
